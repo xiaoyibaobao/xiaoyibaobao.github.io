@@ -1919,7 +1919,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #50fb74;
+  background: #5b96ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2050,10 +2050,6 @@ img:hover {
 }
 .powered-by {
   margin-right: 10px;
-}
-.powered-by::after {
-  content: "|";
-  padding-left: 10px;
 }
 .cc-license {
   margin-top: 10px;
