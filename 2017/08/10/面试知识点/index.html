@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="前端面试题总结," />
 
 
 
@@ -97,13 +97,14 @@
 
 
 <meta name="description" content="1、你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?一般都会在主流浏览器中进行测试,包括 IE,Chrome,Safari,Firefox 和 Opera.内核 核:IE: trident 内核(1997 年的 IE4 中首次被采用,沿用至今.腾讯,猎豹,360 等浏览器都是用了 IE 的内核)Firefox:gecko 内核 (开源内核,因为火狐用户最多,被称为火狐内核,是一个跨平台内">
+<meta name="keywords" content="前端面试题总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常见面试知识点(一):HTML&#x2F;CSS">
 <meta property="og:url" content="http://yoursite.com/2017/08/10/面试知识点/index.html">
 <meta property="og:site_name" content="Deng HuaJin">
 <meta property="og:description" content="1、你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?一般都会在主流浏览器中进行测试,包括 IE,Chrome,Safari,Firefox 和 Opera.内核 核:IE: trident 内核(1997 年的 IE4 中首次被采用,沿用至今.腾讯,猎豹,360 等浏览器都是用了 IE 的内核)Firefox:gecko 内核 (开源内核,因为火狐用户最多,被称为火狐内核,是一个跨平台内">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-10T13:29:22.253Z">
+<meta property="og:updated_time" content="2017-08-10T13:43:43.158Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常见面试知识点(一):HTML&#x2F;CSS">
 <meta name="twitter:description" content="1、你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?一般都会在主流浏览器中进行测试,包括 IE,Chrome,Safari,Firefox 和 Opera.内核 核:IE: trident 内核(1997 年的 IE4 中首次被采用,沿用至今.腾讯,猎豹,360 等浏览器都是用了 IE 的内核)Firefox:gecko 内核 (开源内核,因为火狐用户最多,被称为火狐内核,是一个跨平台内">
@@ -378,7 +379,7 @@
 <p>18、img 的 alt 与 title 有何异同? strong 与 em 的异同?<br>alt 属性是在你的图片因为某种原因不能加载时在页面显示的?示信息,它会直接输出在原本加载图片的地方<br>title属性是在你鼠标悬停在该图片上时显示一个小?示,鼠标离开就没有了,有点类似jQuery的hover.HTML的绝大多数标签<br>都支持 title 属性,title 属性就是专门做?示信息的.<br>默认显示样式上:<em>默认样式是斜体,<strong>默认样式是粗体.<br>语义上:<em>用来局部强调,<strong>则是全局强调.从视觉上考虑,<em>的强调是有顺序的,阅读到某处时,才会注意<br>到.<strong>的强调则是一种随意无顺序的,看见某文时,立刻就凸显出来的关键词句 【注】:在实际开发中,我们看到一般大网站<br>都只是使用<strong>标签就够了,比较少使用<em>标签.此外,使用<em>和<strong>这两个标签可以为 SEO 关键词排名加分.</strong></em></em></strong></strong></em></strong></em></strong></em></p>
 <p>19、简述一下 src 与 href 的区别.<br>src 用于替换当前元素(引入),href 用于在当前文档和引用资源之间确立联系(关联).<br>src是source的缩写,指向外部资源的位置,指向的内容将会嵌入到文档中当前标签所在位置;在请求src资源时会将其指向的<br>资源下载并应用到文档内,例如 js 脚本,img 图片和 frame 等元素.<br>当浏览器解析到该元素时,会暂停其他资源的下载和处理,直到将该资源加载、编译、执行完毕,图片和框架等元素也如此,<br>类似于将所指向资源嵌入当前标签内.这也是为什么将 js 脚本放在底部而不是头部.<br>href 是 Hypertext Reference 的缩写,指向网络资源所在位置,建立和当前元素(锚点)或当前文档(链接)之间的链接,如果我们<br>在文档中添加 <link href="common.css" rel="stylesheet">那么浏览器会识别该文档为 css 文件,就会并行下载资源并且不会停止<br>对当前文档的处理.这也是为什么建议使用 link 方式来加载 css,而不是使用@import 方式<br>补充:link 和@import 的区别,两者都是外部引用 CSS 的方式,但是存在一定的区别:<br>1.link 是 HTML 标签,除了加载 CSS 外,还可以定义 RSS 等其他事务;@import 属于 CSS 范畴,只能加载 CSS.<br>2.link 引用 CSS 时,在页面载入时同时加载;@import 需要页面网页完全载入以后加载.<br>3.link 是 XHTML 标签,无兼容问题;@import 是在 CSS2.1 ?出的,低版本的浏览器不支持.<br>4.link 支持使用 Javascript 控制 DOM 去改变样式;而@import 不支持.</p>
 <p>20、px 和 em 的区别.<br>px 和 em 都是长度单位.区别是,px 的值是固定的,指定是多少就是多少,计算比较容易.em 得值不是固定的,并且 em 会继承<br>父级元素的字体大小(先计算结果后继承,和数值+%一样).<br>浏览器的默认字体高都是 16px.所以未经调整的浏览器都符合: 1em=16px.那么 12px=0.75em, 10px=0.625em</p>
-<p>21、行内元素和块级元素的具体区别是什么?行内元素的 padding 和 margin 可设置吗?<br>一、块级元素:block element<br>块级元素默认占一整行,可嵌套块级元素或行内元素;一般作为容器出现,用来组织结构,特例:<form>只能包含块级元素<br>DIV 是最常用的块级元素,元素样式的 display:block 都是块级元素<br>二、行内元素:inline element<br>也叫内联元素、内嵌元素等;行内元素一般都是基于语义级(semantic)的基本元素,只能容纳文本或其他内联元素<br>元素样式的 display : inline 的都是行内元素<br>三、block(块)元素的特点<br>①、总是在新行上开始;<br>②、高度,行高以及外边距和内边距都可控制;<br>③、宽度缺省是它的容器的 100%,除非设定一个宽度.<br>④、它可以容纳内联元素和其他块元素<br>四、inline 元素的特点<br>①、和其他元素都在一行上;<br>②、高,行高及外边距和内边距不可改变;<br>③、宽度就是它的文字或图片的宽度,不可改变<br>④、内联元素只能容纳文本或者其他内联元素<br>对行内元素,需要注意如下<br>设置宽度 width 无效.<br>设置高度 height 无效,可以通过 line-height 来设置.<br>设置 margin 只有左右 margin 有效,上下无效.<br>设置 padding 只有左右 padding 有效,上下则无效.注意元素范围是增大了,但是对元素周围的内容是没影响的.<br>五、常见的块状元素<br>Address、blockquote、center、dir、div、dl、fieldset、form 、h1 到 h6、hr、input、prompt、 menu、noframes、noscript、<br>ol、p、pre、table、ul<br>六、常见的内联元素<br>a、abbr、acronym、b、bdo、big、br、cite、code、dfn、em、 font、i、img、input、 kbd、label、q、s、samp、select、<br>small、span、strike、strong、sub、sup、textarea、u<br>七、空元素<br>没有内容的 HTML 内容被称为空元素.空元素是在开始标签中关闭的.<br><hr> <input> <img></form></p>
+<p>21、行内元素和块级元素的具体区别是什么?行内元素的 padding 和 margin 可设置吗?<br>一、块级元素:block element<br>块级元素默认占一整行,可嵌套块级元素或行内元素;一般作为容器出现,用来组织结构,特例:<form>只能包含块级元素<br>DIV 是最常用的块级元素,元素样式的 display:block 都是块级元素<br>二、行内元素:inline element<br>也叫内联元素、内嵌元素等;行内元素一般都是基于语义级(semantic)的基本元素,只能容纳文本或其他内联元素<br>元素样式的 display : inline 的都是行内元素<br>三、block(块)元素的特点<br>①、总是在新行上开始;<br>②、高度,行高以及外边距和内边距都可控制;<br>③、宽度缺省是它的容器的 100%,除非设定一个宽度.<br>④、它可以容纳内联元素和其他块元素<br>四、inline 元素的特点<br>①、和其他元素都在一行上;<br>②、高,行高及外边距和内边距不可改变;<br>③、宽度就是它的文字或图片的宽度,不可改变<br>④、内联元素只能容纳文本或者其他内联元素<br>对行内元素,需要注意如下<br>设置宽度 width 无效.<br>设置高度 height 无效,可以通过 line-height 来设置.<br>设置 margin 只有左右 margin 有效,上下无效.<br>设置 padding 只有左右 padding 有效,上下则无效.注意元素范围是增大了,但是对元素周围的内容是没影响的.<br>五、常见的块状元素<br>Address、blockquote、center、dir、div、dl、fieldset、form 、h1 到 h6、hr、input、prompt、 menu、noframes、noscript、<br>ol、p、pre、table、ul<br>六、常见的内联元素<br>a、abbr、acronym、b、bdo、big、br、cite、code、dfn、em、 font、i、img、input、 kbd、label、q、s、samp、select、<br>small、span、strike、strong、sub、sup、textarea、u<br>七、空元素<br>没有内容的 HTML 内容被称为空元素.空元素是在开始标签中关闭的.</form></p>
 <p>22、rgba()和 opacity 的透明效果有什么不同?<br>rgba()和 opacity 都能实现透明效果.<br>opacity 作用于元素,以及元素内的所有内容的透明度<br>rgba()只作用于元素的颜色或其背景色.(设置 rgba 透明的元素的子元素不会继承透明效果！)</p>
 <p>23、css 中可以让文字在垂直和水平方向上重叠的两个属性是什么?<br>垂直方向:line-height:0; 垂直上缩成 1 行<br>水平方向:letter-spacing:字体大小 font-size 值取负; 水平上缩成 1 列<br>letter-spacing 还可以用于消除 inline-block 元素间的换行符空格间隙</p>
 <p>24、BFC 是什么?<br>BFC(块级格式化上下文),一个独立的渲染区域,只有块级元素参与,规定了内部块级元素的布局方式,且该区域与外部无关.<br>BFC 元素特性表现原则:内部子元素再怎么变动都不会影响外部元素<br>布局规则:<br>1.内部 BOX 会在垂直方向上一个接一个放置,所以是从上向下排列<br>2.元素的 margin 左边和父级的左边紧挨,浮动元素也是这样,所以是从左向右排列<br>3.BOX 垂直方向上距离由 margin 决定,但同一个 BFC 内的两个相邻元素的 margin 会出现外边距合并(overflow 可以解<br>决外边距合并)<br>4.BFC 是页面上一个隔离的独立容器,内容子元素不影响外部元素<br>5.计算 BFC 高度时,浮动元素也参与计算(overflow 清除浮动以后可以撑开盒子高度)<br>BFC 的生成:<br>根元素 body、浮动 float 不为 none、定位 position:absolute/fixed、overflow、display:inline-block/flex/table-cell</p>
@@ -431,6 +432,12 @@ background-position: center;
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端面试题总结/" rel="tag"># 前端面试题总结</a>
+          
+        </div>
       
 
       
@@ -565,7 +572,7 @@ var jiathis_config={
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
