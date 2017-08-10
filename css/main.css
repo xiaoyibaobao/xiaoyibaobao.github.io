@@ -1069,7 +1069,7 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background: transparent;
+  background: url("../../../../images/background.jpg");
 }
 .header-inner {
   position: relative;
@@ -1919,7 +1919,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2f611c;
+  background: #ff53ff;
 }
 .links-of-blogroll {
   font-size: 13px;
