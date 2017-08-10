@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="shell命令," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Shell 介绍 Shell：壳（区别于：核） 普通意义上的shell就是可以接受用户输入命令的程序。它之所以被称作shell是因为它隐藏了操作系统低层的细节。 Bourne-Again shell（bash）：应用非常广泛的一种shell工具，是一个命令处理器，bash也是大多数Linux系统默认的Shell。">
+<meta name="keywords" content="shell命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hell命令的使用">
+<meta property="og:url" content="http://yoursite.com/2017/08/10/hell命令的使用/index.html">
+<meta property="og:site_name" content="Deng HuaJin">
+<meta property="og:description" content="Shell 介绍 Shell：壳（区别于：核） 普通意义上的shell就是可以接受用户输入命令的程序。它之所以被称作shell是因为它隐藏了操作系统低层的细节。 Bourne-Again shell（bash）：应用非常广泛的一种shell工具，是一个命令处理器，bash也是大多数Linux系统默认的Shell。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2017/08/10/hell命令的使用/day-01/1-%E6%95%99%E5%AD%A6%E8%B5%84%E6%96%99/git-info/vi3model.png">
+<meta property="og:updated_time" content="2017-08-10T03:13:47.967Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hell命令的使用">
+<meta name="twitter:description" content="Shell 介绍 Shell：壳（区别于：核） 普通意义上的shell就是可以接受用户输入命令的程序。它之所以被称作shell是因为它隐藏了操作系统低层的细节。 Bourne-Again shell（bash）：应用非常广泛的一种shell工具，是一个命令处理器，bash也是大多数Linux系统默认的Shell。">
+<meta name="twitter:image" content="http://yoursite.com/2017/08/10/hell命令的使用/day-01/1-%E6%95%99%E5%AD%A6%E8%B5%84%E6%96%99/git-info/vi3model.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/10/hell命令的使用/"/>
+
+
+
+
+
+  <title>hell命令的使用 | Deng HuaJin</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Deng HuaJin</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">每一个不曾起舞的日子都是对生命的辜负</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/10/hell命令的使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiaoyibaobao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Deng HuaJin">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">hell命令的使用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T11:09:38+08:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端工具/" itemprop="url" rel="index">
+                    <span itemprop="name">前端工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Shell-介绍"><a href="#Shell-介绍" class="headerlink" title="Shell 介绍"></a>Shell 介绍</h1><ul>
+<li>Shell：壳（区别于：核）</li>
+<li>普通意义上的shell就是可以接受用户输入命令的程序。它之所以被称作shell是因为它隐藏了操作系统低层的细节。</li>
+<li>Bourne-Again shell（bash）：应用非常广泛的一种shell工具，是一个命令处理器，bash也是大多数Linux系统默认的Shell。</li>
+</ul>
+<a id="more"></a>
+<h2 id="常用-shell-命令"><a href="#常用-shell-命令" class="headerlink" title="常用 shell 命令"></a>常用 shell 命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># change directory 改变目录</span></div><div class="line"><span class="built_in">cd</span> 01-教学资料 <span class="comment"># 进入到 01-教学资料 文件夹</span></div><div class="line"><span class="comment"># cd .. 				 # 返回上一级目录</span></div><div class="line"></div><div class="line"><span class="comment"># list 展示当前目录列表</span></div><div class="line">ls</div><div class="line"><span class="comment"># ls -l 	# 以列表的形式展示目录</span></div><div class="line"><span class="comment"># ls -a 	# 展示全部目录</span></div><div class="line"><span class="comment"># ls -al 	# 相当于 ls -a -l</span></div><div class="line"><span class="comment"># ls -al 01-教学资料 	# 展示 01-教学资料 中所有的目录</span></div><div class="line"></div><div class="line"><span class="comment"># 打印当前目录</span></div><div class="line"><span class="comment"># print work directory</span></div><div class="line"><span class="built_in">pwd</span></div><div class="line"></div><div class="line"><span class="comment"># 清空当前窗口内容</span></div><div class="line">clear</div><div class="line"></div><div class="line"><span class="comment"># 创建文件夹</span></div><div class="line">mkdir 文件夹名称</div><div class="line"><span class="comment"># mkdir js css images # 同时创建多个文件夹</span></div><div class="line"></div><div class="line"><span class="comment"># 创建文件</span></div><div class="line">touch 文件名称</div><div class="line"><span class="comment"># touch css/index.css</span></div><div class="line"></div><div class="line"><span class="comment"># 查看文件全部内容</span></div><div class="line">cat 文件名称</div><div class="line"><span class="comment"># 按 q 键退出查看</span></div><div class="line"></div><div class="line"><span class="comment"># 查看文件部分内容</span></div><div class="line">less 文件名称</div><div class="line"><span class="comment"># 内容太多，可以按 空格键 查看剩余内容</span></div><div class="line"><span class="comment"># 查看到最后，需要按 q键 退出查看</span></div><div class="line"></div><div class="line"><span class="comment"># 删除文件</span></div><div class="line">rm 文件名称</div><div class="line">rm -r css</div><div class="line"></div><div class="line"><span class="comment"># 删除空文件夹</span></div><div class="line">rmdir 文件夹名称</div><div class="line"></div><div class="line"><span class="comment"># 移动文件（相当于剪切）</span></div><div class="line">mv 文件名称 目标目录</div><div class="line"><span class="comment"># mv index.html css/pipixia.html # 移动的同时，修改文件名称</span></div><div class="line"><span class="comment"># mv index.html demo.html # 重命名</span></div><div class="line"></div><div class="line"><span class="comment"># 复制文件</span></div><div class="line">cp 文件名称 新文件名称</div><div class="line"><span class="comment"># cp index.html js/index1.html</span></div><div class="line"></div><div class="line"><span class="comment"># 自动补全 按：tab键</span></div><div class="line"><span class="comment"># 如果有多种情况，连按两次 tab键 会把所有的文件名称打印出来</span></div><div class="line"></div><div class="line"><span class="comment"># 重定向 将内容 Hello-World 添加到 test.txt 文件中</span></div><div class="line"><span class="built_in">echo</span> Hello-World &gt; test.txt</div><div class="line"><span class="comment"># ls &gt; test.txt 	# 覆盖，将ls命令的结果输出到 test.txt 文件中</span></div><div class="line"><span class="comment"># ls &gt;&gt; test.txt 	# 追加</span></div></pre></td></tr></table></figure>
+<h1 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h1><ul>
+<li>vi的3种模式 - 图例</li>
+<li><img src="day-01/1-%E6%95%99%E5%AD%A6%E8%B5%84%E6%96%99/git-info/vi3model.png" alt="vi三种模式"></li>
+</ul>
+<h2 id="3种模式"><a href="#3种模式" class="headerlink" title="3种模式"></a>3种模式</h2><ul>
+<li>1 命令模式</li>
+<li>2 插入模式</li>
+<li>3 底行模式</li>
+<li>每种模式，能够执行的操作是不同的</li>
+</ul>
+<h2 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h2><ul>
+<li>在命令模式下，输入<code>i</code>或<code>a</code>，就可以进行编辑了</li>
+</ul>
+<h2 id="底行模式"><a href="#底行模式" class="headerlink" title="底行模式"></a>底行模式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 使用 vi</span></div><div class="line">vi 文件路径</div><div class="line"></div><div class="line"><span class="comment"># 保存</span></div><div class="line">:w</div><div class="line"><span class="comment"># :w filenme #另存为</span></div><div class="line"></div><div class="line"><span class="comment"># 退出</span></div><div class="line">:q</div><div class="line"></div><div class="line"><span class="comment"># 保存并退出</span></div><div class="line">:wq</div><div class="line"></div><div class="line"><span class="comment"># 撤销更改，返回到上一次保存的状态</span></div><div class="line">:e!</div><div class="line"></div><div class="line"><span class="comment"># 不保存强制退出</span></div><div class="line">:q!</div><div class="line"></div><div class="line"><span class="comment"># 展示行号</span></div><div class="line">:<span class="built_in">set</span> nu</div><div class="line"><span class="comment"># 删除行号</span></div><div class="line">:<span class="built_in">set</span> nonu</div><div class="line">第一种是，手动显示：在vim命令行模式下输入  ：<span class="built_in">set</span> nu</div><div class="line"></div><div class="line">  取消显示：在vim命令行模式下输入：  <span class="built_in">set</span> nonu</div><div class="line"></div><div class="line">第二种是，永久自动显示：我们修改一个配置文件。</div><div class="line"></div><div class="line">我们输入命令：vim   ~/.vimrc</div><div class="line"></div><div class="line">打开后是一个空文件，我们添加 <span class="built_in">set</span> nu，保存退出，再次进入vim编辑器，就会自动显示出行号了。大笑如此简单</div></pre></td></tr></table></figure>
+<h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 保存并退出，大写</span></div><div class="line">ZZ</div><div class="line"></div><div class="line"><span class="comment"># 辙销操作，可多次使用</span></div><div class="line">u</div><div class="line"></div><div class="line"><span class="comment"># 删除当前行</span></div><div class="line">dd</div><div class="line"></div><div class="line"><span class="comment"># 复制当前行</span></div><div class="line">yy</div><div class="line"></div><div class="line"><span class="comment"># 粘贴内容</span></div><div class="line">p</div><div class="line"></div><div class="line"><span class="comment"># 向前翻页</span></div><div class="line">ctrl+b</div><div class="line"></div><div class="line"><span class="comment"># 向后翻页</span></div><div class="line">ctrl+f</div><div class="line"></div><div class="line"><span class="comment"># 进入编辑模式，</span></div><div class="line">i <span class="comment">#当前光标处插入</span></div><div class="line">a <span class="comment">#当前光标后插入</span></div><div class="line">A <span class="comment">#光标移动到行尾</span></div><div class="line">o <span class="comment">#当前行下面插入新行</span></div><div class="line">O <span class="comment">#当前行上面插入新行</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/shell命令/" rel="tag"># shell命令</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="xiaoyibaobao" />
+          <p class="site-author-name" itemprop="name">xiaoyibaobao</p>
+           
+              <p class="site-description motion-element" itemprop="description">前端学习</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Shell-介绍"><span class="nav-number">1.</span> <span class="nav-text">Shell 介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用-shell-命令"><span class="nav-number">1.1.</span> <span class="nav-text">常用 shell 命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vi编辑器"><span class="nav-number">2.</span> <span class="nav-text">vi编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3种模式"><span class="nav-number">2.1.</span> <span class="nav-text">3种模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入模式"><span class="nav-number">2.2.</span> <span class="nav-text">插入模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#底行模式"><span class="nav-number">2.3.</span> <span class="nav-text">底行模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令模式"><span class="nav-number">2.4.</span> <span class="nav-text">命令模式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiaoyibaobao</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
