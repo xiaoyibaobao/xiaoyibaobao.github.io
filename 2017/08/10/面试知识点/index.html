@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="1、你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?一般都会在主流浏览器中进行测试,包括 IE,Chrome,Safari,Firefox 和 Opera.内核 核:IE: trident 内核(1997 年的 IE4 中首次被采用,沿用至今.腾讯,猎豹,360 等浏览器都是用了 IE 的内核)Firefox:gecko 内核 (开源内核,因为火狐用户最多,被称为火狐内核,是一个跨平台内">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见面试知识点(一):HTML&#x2F;CSS">
+<meta property="og:url" content="http://yoursite.com/2017/08/10/面试知识点/index.html">
+<meta property="og:site_name" content="Deng HuaJin">
+<meta property="og:description" content="1、你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?一般都会在主流浏览器中进行测试,包括 IE,Chrome,Safari,Firefox 和 Opera.内核 核:IE: trident 内核(1997 年的 IE4 中首次被采用,沿用至今.腾讯,猎豹,360 等浏览器都是用了 IE 的内核)Firefox:gecko 内核 (开源内核,因为火狐用户最多,被称为火狐内核,是一个跨平台内">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-08-10T13:29:22.253Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常见面试知识点(一):HTML&#x2F;CSS">
+<meta name="twitter:description" content="1、你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?一般都会在主流浏览器中进行测试,包括 IE,Chrome,Safari,Firefox 和 Opera.内核 核:IE: trident 内核(1997 年的 IE4 中首次被采用,沿用至今.腾讯,猎豹,360 等浏览器都是用了 IE 的内核)Firefox:gecko 内核 (开源内核,因为火狐用户最多,被称为火狐内核,是一个跨平台内">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/10/面试知识点/"/>
+
+
+
+
+
+  <title>常见面试知识点(一):HTML/CSS | Deng HuaJin</title>
+  
+
+
+
+
+
+
+
+
+
+ 
+ <script type="text/javascript"
+ color="255,0,0" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+ 
+
+</head>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Deng HuaJin</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">每一个不曾起舞的日子都是对生命的辜负</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/10/面试知识点/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiaoyibaobao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Deng HuaJin">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常见面试知识点(一):HTML/CSS</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-10T21:15:36+08:00">
+                2017-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试知识点/" itemprop="url" rel="index">
+                    <span itemprop="name">面试知识点</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>1、你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?<br>一般都会在主流浏览器中进行测试,包括 IE,Chrome,Safari,Firefox 和 Opera.<br>内核 核:<br>IE: trident 内核(1997 年的 IE4 中首次被采用,沿用至今.腾讯,猎豹,360 等浏览器都是用了 IE 的内核)<br>Firefox:gecko 内核 (开源内核,因为火狐用户最多,被称为火狐内核,是一个跨平台内核,windows,linux 和 mac os 中可以使用)<br>Chrome:Blink(基于 webkit,Google 与 Opera Software 共同开发) (2013 年之前是用 webkit)<br>Safari:webkit 内核 (苹果公司的内核,开源代码,不受 IE,火狐限制. 遨游浏览器,塞班手机浏览器,安卓默认浏览器都是用<br>webkit 作为内核.另外 google chrome ,360 极速浏览器和搜狗高速浏览器高速模式也使用 webkit 作为内核.)<br>Opera:以前是 presto 内核(渲染速度达到极致,ie 内核速度的 3 倍,但是兼容性很差),Opera 现已改用 Google Chrome 的 Blink<br>内核<br>未来:Mozilla 与三星也达成合作协议开发”下一代”浏览器渲染引擎 Servo.</p>
+<a id="more"></a>
+<p>2、每个 HTML 文件里开头都有个很重要的东西,Doctype,知道这是干什么的吗?<br>&lt;!DOCTYPE&gt; 声明.<br>DOCTYPE,简称为DTDs,英文Document type,中文”文档类型”.是一种标准通用标记语言的文档类型声明,它的目的是要告诉标<br>准通用标记语言解析器,它应该使用什么样的文档类型定义(DTD)来解析文档.(重点:告诉浏览器按照何种规范解析页面)<br>没有定义 doctype 会开启怪异模式.怪异模式下,很多的 css 效果都会受到影响.<br>现在有用于在 Web 浏览器中的布局引擎的三种模式:<br>1.quirks mode: 怪异模式<br>2.almost standards mode:准标准模式 (只有极少数的怪异行为执行.)</p>
+<ol>
+<li>full standards mode:完整标准模式(一直努力希望致力于?述 HTML 和 CSS 规范.)——In full standards mode , the behavior is<br>(hopefully) the behavior described by the HTML and CSS specifications.)<br>区分严格模式与混杂模式的意义在于:DOCTYPE 不存在或格式不正确会导致文档以混杂模式呈现.</li>
+</ol>
+<p>3、Quirks 模式是什么?它和 Standards 模式有什么区别?<br>答案 1:从 IE6 开始,引入了 standard 模式.而在 IE6 之前 CSS 还不够成熟,所以 IE5 等之前的浏览器对 CSS 的支持很差,都是基<br>于旧的布局方式写的,为了保证既能?供新的渲染机制又能保证就的页面能够正常显示,此时就传入了一个参数,DTD.就是文档声<br>明.在 IE6 之前,是没有 DTD 的,那么久假定,如果有 DTD,那就是标准模式,如果没有 DTD,那就是以原来的旧模式进行渲染,这种兼容,<br>就是怪异模式.<br>答案 2:标准模式(standard 模式)是指,浏览器按 W3C 标准解析执行代码;怪异模式(Quirks 模式)则是使用浏览器自己的方式<br>解析执行代码,因为不同浏览器解析执行的方式不一样,所以我们称之为怪异模式.浏览器解析时到底使用标准模式还是怪异模式,<br>与你网页中的 DTD 声明直接相关,DTD 声明定义了标准文档的类型(标准模式解析)文档类型,会使浏览器使用相应的方式加载网页<br>并显示,忽略 DTD 声明,将使网页进入怪异模式(quirks mode).</p>
+<p>4、谈谈以前端角度出发做好 SEO 需要考虑什么?<br>Meta 标签优化<br>主要包括主题(Title),网站?述(Description),和关键词(Keywords).其他还有 Author(作者),Category(目录),Language(编码语种)等.<br>放置关键词<br>关键词分析和选择是 SEO 最重要的工作之一.首先要给网站确定主关键词(一般在 5 个上下),然后针对这些关键词进行优化,包括<br>关键词密度(Density),相关度(Relavancy),突出性(Prominency)等等.<br>付费的搜索引擎<br>搜索引擎登录将网站?交(submit)到搜索引擎.如果你的是商业网站,主要的搜索引擎和目录都会要求你付费来获得收录(比如 Yahoo 要 299 美<br>元),但是好消息是(至少到目前为止)最大的搜索引擎 Google 目前还是免费,而且它主宰着 60％以上的搜索市场.<br>链接交换和链接广泛度(Link Popularity)<br>其它网站到你的网站的链接越多,你也就会获得更多的访问量.更重要的是,你的网站的外部链接数越多,会被搜索引擎认为它的重<br>要性越大,从而给你更高的排名.<br>合理的标签使用.</p>
+<p>5、对 WEB 标准以及 W3C 的理解与认识.<br>web 标准简单来说可以分为结构、表现和行为.其中结构主要是有 HTML 标签组成.或许通俗点说,在页面 body 里面我们写<br>入的标签都是为了页面的结构.表现即指 css 样式表,通过 css 可以是页面的结构标签更具美感.行为是指页面和用户具有一定的交<br>互,同时页面结构或者表现发生变化,主要是有 js 组成.<br>web 标准三层分离,使其更具有模块化.但一般产生行为时,就会有结构或者表现的变化,也使这三者的界限并不那么清晰.<br>W3C 对 web 标准?出了规范化的要求,也就是在实际编程中的一些代码规范:包含如下几点:<br>1.对于结构要求:(标签规范可以?高搜索引擎对页面的抓取效率,对 SEO 很有帮助)<br>1)标签字母要小写<br>2)标签要闭合<br>3)标签不允许随意嵌套<br>2.对于 css 和 js 来说<br>1)尽量使用外链 css 样式表和 js 脚本.是结构、表现和行为分为三块,符合规范.同时?高页面渲染速度<br>2)样式尽量少用行间样式表,使结构与表现分离,标签的 id 和 class 等属性命名要做到见文知义,标签越少,加载越快,用<br>户体验?高,代码维护简单,便于改版<br>3)不需要变动页面内容,便可?供打印版本而不需要复制内容,?高网站易用性.</p>
+<p>6、HTML 与 XHTML——二者有什么区别?<br>粗略可以分为两大类比较:一个是功能上的差别,另外是书写习惯的差别.关于功能上的差别,主要是 XHTML 可兼容各大浏览<br>器、手机以及 PDA,并且浏览器也能快速正确地编译网页.<br>因为 XHTML 的语法较为严谨,所以需要特别注意 XHTML 的规则.<br>1.所有标签都必须小写不能大小写穿插其中,也不能全部都是大写<br>2.标签必须成双成对<br>3.标签顺序必须正确<br>标签由外到内,一层层包覆着,所以假设你先写 div后写h1,结尾就要先写h1 后写div.只要记住一个原则”先进后出”,先弹出的<br>标签要后结尾.<br>4.所有属性都必须使用双引号<br>5.不允许使用 target=”_blank”<br>从XHTML 1.1 开始全面禁止target属性,如果想要有开新窗口的功能,就必须改写为rel=”external”,并搭配JavaScript实现此效<br>果.</p>
+<p>7、知道什么是微格式吗?谈谈理解.在前端构建中应该考虑微格式吗?<br>简 化 版 本 记忆 忆:<br>微格式(microformats):是一种让机器可读的语义化 XHTML 词汇的集合,是结构化数据的开放标准.是为特殊应用而制定的特<br>殊格式.<br>包含数据的结构化的 XHTML代码块的定义格式,由于是XHTML代码块,所以很适合人类阅读,由于是结构化的,又很容易被机<br>器处理,很容易和外部进行数据通信. 需要作的仅仅是为现有的(X)HTML 元素添加元数据和其他属性.所以,我们无需抛开已有的工<br>作习惯,因为微格式?供的解决方法是符合当前我们行为和习惯模式的.<br>优点:将智能数据添加到网页上,让网站内容在搜索引擎结果界面可以显示额外的?示.(应用范例:豆瓣); 在爬取Web内容时,<br>能够更为准确地识别内容块的语义.<br>一句话,根据特定格式给现有标签添加语义化属性,对搜索引擎友好,?供额外显示信息,方便代码阅读</p>
+<p>8、div+css 的布局较 table 布局有什么优点?<br>1.能够使代码精简: css 文件可以在网站的任意一个页面进行调用,避免了使用 table 表格修改部分页面.<br>2.?升网页访问速度:代码少,其浏览访问速度自然得以?升,从而?升了网站的用户体验度.<br>3.有利于 SEO 优化:对搜索引擎很是友好,简洁、结构化的代码更加有利于突出重点和适合搜索引擎抓取.另网络爬虫不喜欢<br>页面有态度 css 代码,所以外部调用 CSS 有益于优化<br>4.浏览器兼容性不好:DIV+CSS 更容易出现多种浏览器不兼容的问题,主要原因是不同的浏览器对 web 标准默认值不同.<br>回答问题可以从下面 table 优缺点引入<br>table 优点:开发时间短(使用 DW 开发速度快);纯 table 各浏览器不会有兼容问题;内容可自适应;在搜索引擎排名能靠前.<br>table 缺点:如果布局变更,需要重新开发;如果 table 里有 div ul 等,可能会出现浏览器兼容问题;加载速度慢;table 套 table,会<br>害死维护人员的.</p>
+<p>9、从用户刷新网页开始, 一次 js 请求一般情况下有哪些地方会有缓存处理?<br>DNS 缓存(成功访问后网站的域名、IP 地址信息缓存到本地<br>CDN 缓存(内容分发网络,选择一个离用户最近的 CDN 边缘节点来响应用户的请求)<br>浏览器缓存(存储最近访问的过的页面,再次请求时,从本地磁盘显示文档来加速页面的阅览,节约网络的资源加速浏览)<br>服务器缓存(将需要频繁访问的网络内容存放在离用户较近、访问速度更快的系统中,来?高访问速度).</p>
+<p>10、大量图片加载很慢,有哪些方法优化 这些图片的加载,给用户更好的体验.<br>1.图片懒加载,在页面上的未可视区域可以添加一个滚动条事件,判断图片位置与浏览器顶端的距离与页面的距离,如果前者<br>小于后者,优先加载. (大型电商网站常见)<br>2.图片预加载:如果为幻灯片、相册等,可以使用图片预加载技术,将当前展示图片的前一张和后一张优先下载.<br>3.如果图片为 css 图片,可以使用 CSSsprite 精灵图、SVGsprite 矢量图、Iconfont 字体图标、Base64 等技术.<br>4.缩略图:如果图片过大,可以使用特殊编码的图片,加载时会先加载一张压缩的特别厉害的缩略图,以?高用户体验.</p>
+<p>11、知道的网页制作会用到的图片格式有哪些?<br>1.PSD 格式,是 Photoshop 专用文件.非压缩的原始文件保存格式.常用于保留原始信息,文件较大,不便于传输,一般用于备份.<br>2.GIF 图片格式, 256 种的颜色,无损压缩,支持透明度,<br>3.PNG 图片格式,有 PNG-8、PNG-24 两种,比 gif 更好,但旧的浏览器和程序可能不支持 PNG 文件.<br>4.JPEG 图片格式,目前最流行的图像格式,可以把文件压缩到最小的格式,下载速度快.存在一定损耗<br>5.BMP 图片格式,Windows 系统标准图像,缺点–占用磁盘空间过大.在单机上比较流行<br>6.webp 是由谷歌推出的新一代图片格式,在压缩方面比当前 JPEG 格式更优越,同时?供了有损压缩与无损压缩的图片文件<br>格式,派生自图像编码格式 VP8<br>优点:在质量相同的情况下,WebP 格式图像的体积要比 JPEG 格式图像小 40%.<br>缺点:编解码速度偏慢.但是由于减少了文件体积,缩短了加载的时间,实际上文件的渲染速度反而变快了.<br>浏览器支持不全.因此,目前可行的解决方法只能是同时?供两套图片.</p>
+<p>12、前端页面有哪三层构成,分别是什么?作用是什么?<br>1.结构层:由 HTML 或 XHTML 之类的标记语言负责创建,仅负责语义的表达.解决了页面”内容是什么”的问题.<br>2.表示层:由 CSS 负责创建,解决了页面”如何显示内容”的问题.<br>3.行为层:由脚本负责.解决了页面上”内容应该如何对事件作出反应”的问题.</p>
+<p>13、css 的基本语句构成是?<br>选择器{属性 1:值 1;属性 2:值 2;……}</p>
+<p>14、CSS 选择符有哪些?哪些属性可以继承?优先级算法如何计算? CSS3 新增伪类有那些?<br>选择符:<br>1.id 选择器( # myid)、2.类选择器(.myclassname)、3.标签选择器(div, h1, p)、4.子选择器(ul &lt; li)、5.后代选择器(li a)、6.<br>通配符选择器( * )、7.属性选择器(a[rel = “external”])、8.相邻选择器(h1 + p)、9.伪类选择器(a: hover, li: nth - child)<br>可继承: font-size font-family color, UL LI DL DD DT;<br>不可继承 :border padding margin width height ;<br>优先级为:<br>!important &gt; 行内样式 &gt; id &gt; class &gt; tag &gt; 通配符 &gt; 继承 &gt; 默认<br>权重算法:(不标准,但可以帮助理解)<br>用 1 表示派生选择器的优先级、用 10 表示类选择器的优先级、用 100 表示 ID 选择器的优先级<br>eg:div.test1 .span var 优先级 1+10 +10 +1、span#xxx .songs li 优先级 1+100 + 10 + 1、#xxx li 优先级 100 +1</p>
+<p>15、简介盒子模型.<br>CSS 的盒子模型有两种:IE 盒子模型、标准的 W3C 盒子模型模型.<br>内容(content)、填充(padding)、边框(border)、边界(margin)都是盒模型的基本属性.<br>区别:<br>标准的 W3C 盒子模型模型: 设置的 border 值只包括 content 和 padding.<br>IE 盒子模型:设置的 border 值包括 content,padding 和 border 值.</p>
+<p>16、有哪项方式可以对一个 DOM 设置它的 CSS 样式?<br>外部样式表:link 标签引入一个外部 css 文件<br>内部样式表:将 css 代码放在 <head> 标签内部<br>内联样式:将 css 样式直接定义在 HTML 元素内部</head></p>
+<p>17、CSS 中可以通过哪些属性定义,使得一个 DOM 元素不显示在浏览器可视范围内?<br>基本的: 设置 display :none;(不占位置),或者设置 visibility :hidden(占位置)<br>使用 display:none 属性后,HTML 元素(对象)的宽度、高度等各种属性值都将”丢失”;而使用 visibility:hidden 属性<br>后,HTML 元素(对象)仅仅是在视觉上看不见(完全透明),而它所占据的空间位置仍然存在.<br>技巧性: 设置宽高为 0,设置透明度为 0,设置 z-index 位置在-1000</p>
+<p>18、img 的 alt 与 title 有何异同? strong 与 em 的异同?<br>alt 属性是在你的图片因为某种原因不能加载时在页面显示的?示信息,它会直接输出在原本加载图片的地方<br>title属性是在你鼠标悬停在该图片上时显示一个小?示,鼠标离开就没有了,有点类似jQuery的hover.HTML的绝大多数标签<br>都支持 title 属性,title 属性就是专门做?示信息的.<br>默认显示样式上:<em>默认样式是斜体,<strong>默认样式是粗体.<br>语义上:<em>用来局部强调,<strong>则是全局强调.从视觉上考虑,<em>的强调是有顺序的,阅读到某处时,才会注意<br>到.<strong>的强调则是一种随意无顺序的,看见某文时,立刻就凸显出来的关键词句 【注】:在实际开发中,我们看到一般大网站<br>都只是使用<strong>标签就够了,比较少使用<em>标签.此外,使用<em>和<strong>这两个标签可以为 SEO 关键词排名加分.</strong></em></em></strong></strong></em></strong></em></strong></em></p>
+<p>19、简述一下 src 与 href 的区别.<br>src 用于替换当前元素(引入),href 用于在当前文档和引用资源之间确立联系(关联).<br>src是source的缩写,指向外部资源的位置,指向的内容将会嵌入到文档中当前标签所在位置;在请求src资源时会将其指向的<br>资源下载并应用到文档内,例如 js 脚本,img 图片和 frame 等元素.<br>当浏览器解析到该元素时,会暂停其他资源的下载和处理,直到将该资源加载、编译、执行完毕,图片和框架等元素也如此,<br>类似于将所指向资源嵌入当前标签内.这也是为什么将 js 脚本放在底部而不是头部.<br>href 是 Hypertext Reference 的缩写,指向网络资源所在位置,建立和当前元素(锚点)或当前文档(链接)之间的链接,如果我们<br>在文档中添加 <link href="common.css" rel="stylesheet">那么浏览器会识别该文档为 css 文件,就会并行下载资源并且不会停止<br>对当前文档的处理.这也是为什么建议使用 link 方式来加载 css,而不是使用@import 方式<br>补充:link 和@import 的区别,两者都是外部引用 CSS 的方式,但是存在一定的区别:<br>1.link 是 HTML 标签,除了加载 CSS 外,还可以定义 RSS 等其他事务;@import 属于 CSS 范畴,只能加载 CSS.<br>2.link 引用 CSS 时,在页面载入时同时加载;@import 需要页面网页完全载入以后加载.<br>3.link 是 XHTML 标签,无兼容问题;@import 是在 CSS2.1 ?出的,低版本的浏览器不支持.<br>4.link 支持使用 Javascript 控制 DOM 去改变样式;而@import 不支持.</p>
+<p>20、px 和 em 的区别.<br>px 和 em 都是长度单位.区别是,px 的值是固定的,指定是多少就是多少,计算比较容易.em 得值不是固定的,并且 em 会继承<br>父级元素的字体大小(先计算结果后继承,和数值+%一样).<br>浏览器的默认字体高都是 16px.所以未经调整的浏览器都符合: 1em=16px.那么 12px=0.75em, 10px=0.625em</p>
+<p>21、行内元素和块级元素的具体区别是什么?行内元素的 padding 和 margin 可设置吗?<br>一、块级元素:block element<br>块级元素默认占一整行,可嵌套块级元素或行内元素;一般作为容器出现,用来组织结构,特例:<form>只能包含块级元素<br>DIV 是最常用的块级元素,元素样式的 display:block 都是块级元素<br>二、行内元素:inline element<br>也叫内联元素、内嵌元素等;行内元素一般都是基于语义级(semantic)的基本元素,只能容纳文本或其他内联元素<br>元素样式的 display : inline 的都是行内元素<br>三、block(块)元素的特点<br>①、总是在新行上开始;<br>②、高度,行高以及外边距和内边距都可控制;<br>③、宽度缺省是它的容器的 100%,除非设定一个宽度.<br>④、它可以容纳内联元素和其他块元素<br>四、inline 元素的特点<br>①、和其他元素都在一行上;<br>②、高,行高及外边距和内边距不可改变;<br>③、宽度就是它的文字或图片的宽度,不可改变<br>④、内联元素只能容纳文本或者其他内联元素<br>对行内元素,需要注意如下<br>设置宽度 width 无效.<br>设置高度 height 无效,可以通过 line-height 来设置.<br>设置 margin 只有左右 margin 有效,上下无效.<br>设置 padding 只有左右 padding 有效,上下则无效.注意元素范围是增大了,但是对元素周围的内容是没影响的.<br>五、常见的块状元素<br>Address、blockquote、center、dir、div、dl、fieldset、form 、h1 到 h6、hr、input、prompt、 menu、noframes、noscript、<br>ol、p、pre、table、ul<br>六、常见的内联元素<br>a、abbr、acronym、b、bdo、big、br、cite、code、dfn、em、 font、i、img、input、 kbd、label、q、s、samp、select、<br>small、span、strike、strong、sub、sup、textarea、u<br>七、空元素<br>没有内容的 HTML 内容被称为空元素.空元素是在开始标签中关闭的.<br><hr> <input> <img></form></p>
+<p>22、rgba()和 opacity 的透明效果有什么不同?<br>rgba()和 opacity 都能实现透明效果.<br>opacity 作用于元素,以及元素内的所有内容的透明度<br>rgba()只作用于元素的颜色或其背景色.(设置 rgba 透明的元素的子元素不会继承透明效果！)</p>
+<p>23、css 中可以让文字在垂直和水平方向上重叠的两个属性是什么?<br>垂直方向:line-height:0; 垂直上缩成 1 行<br>水平方向:letter-spacing:字体大小 font-size 值取负; 水平上缩成 1 列<br>letter-spacing 还可以用于消除 inline-block 元素间的换行符空格间隙</p>
+<p>24、BFC 是什么?<br>BFC(块级格式化上下文),一个独立的渲染区域,只有块级元素参与,规定了内部块级元素的布局方式,且该区域与外部无关.<br>BFC 元素特性表现原则:内部子元素再怎么变动都不会影响外部元素<br>布局规则:<br>1.内部 BOX 会在垂直方向上一个接一个放置,所以是从上向下排列<br>2.元素的 margin 左边和父级的左边紧挨,浮动元素也是这样,所以是从左向右排列<br>3.BOX 垂直方向上距离由 margin 决定,但同一个 BFC 内的两个相邻元素的 margin 会出现外边距合并(overflow 可以解<br>决外边距合并)<br>4.BFC 是页面上一个隔离的独立容器,内容子元素不影响外部元素<br>5.计算 BFC 高度时,浮动元素也参与计算(overflow 清除浮动以后可以撑开盒子高度)<br>BFC 的生成:<br>根元素 body、浮动 float 不为 none、定位 position:absolute/fixed、overflow、display:inline-block/flex/table-cell</p>
+<p>25、如何垂直居中一个浮动元素?<br>1.已知浮动元素的宽高<br>设定父元素为相对定位,浮动元素为绝对定位 top 和 left 为 50%,再设置浮动元素的 margin-left/top 值为浮动元素宽高一半的负值.<br>2.不知道浮动元素的宽高<br>设定父元素为相对定位,浮动元素为绝对定位.且 left/right/top/bottom 设置为 0,再给浮动元素设置 margin auto.<br>另:如何居中 div? 答:默认 div 有宽度,设置 margin:0 auto;</p>
+<p>26、列出 display 的值及作用.position 的值, relative 和 absolute 定位原点是?<br>display:<br>block—块级元素默认显示方式.单独占一行,能设置宽高 margin 和 padding 值;<br>inline-block—能像块级元素一样设置宽高,但也能像行内元素一样,和其他 div 平列一行.<br>inline—行内元素的默认显示方式.<br>none—缺省值(不存在页面中)<br>position :<br>relative —-相对定位,相对于其正常位置进行定位.<br>absolute —-绝对定位,相对于非 static 定位第一个直接父元素进行定位.<br>fixed —- (老 IE 不支持)—–生成绝对定位的元素,相对于浏览器窗口进行定位.<br>static —- 默认值.没有定位,元素出现在正常的流中(忽略 top, bottom, left, right z-index 声明).</p>
+<p>27、absolute 的 containing block 计算方式跟正常流有什么不同?(即 absolute 的元素,浏览器是<br>怎么找到最终的位置的)<br>css 核心:包含块(Containing Block)是视觉格式化模型的一个重要概念,它与框模型类似,也可以理解为一个矩形,而这个矩形<br>的作用是为它里面包含的元素?供一个参考,元素的尺寸和位置的计算往往是由该元素所在的包含块决定的.<br>包含块简单说就是定位参考框,或者定位坐标参考系,元素一旦定义了定位显示(相对、绝对、固定)都具有包含块性质,它所<br>包含的定位元素都将以该包含块为坐标系进行定位和调整.<br>确定一个元素的 containing block,由 position 属性确定:</p>
+<ol>
+<li>static(默认的)/relative:简单说就是它的父元素的内容框(即去掉 padding 的部分)</li>
+<li>absolute: 向上找最近的定位为 absolute/relative 的元素</li>
+<li>fixed: 它的 containing block 一律为根元素(html/body),根元素也是 initial containing block</li>
+</ol>
+<p>28、?述一个”reset”的 CSS 文件并如何使用它.知道 normalize.css 吗?说明不同之处?<br>引入:不同的浏览器对一些元素有不同的默认样式,不处理时在不同的浏览器下会存在风险,显示差异,甚至布局被打乱,(初始<br>化 CSS 会对搜索引擎优化造成小影响)<br>可以用 Normalize.css 来代替重置样式文件.但它没有重置所有的样式风格,仅?供了一套合理的默认样式值.既能让众多浏<br>览器达到一致和合理,但又不扰乱其他的东西(如粗体的标题). 在这一方面,无法做每一个复位重置.它也确实有些超过一个重置,它<br>处理了我们永远都不用考虑的怪癖,像 HTML 的 audio 元素不一致或 line-height 不一致.</p>
+<p>29、什么是 Css Hack? ie6、7、8 的 hack 分别是什么? 常用 hack 的技巧 ?<br>CSS hack 由于不同厂商的浏览器,或者同一厂商但是不同版本的浏览器,对 CSS 的解析认识不完全一样,因此会导致生成的页<br>面效果不一样,得不到我们所需要的页面效果. 这个时候我们就需要针对不同的浏览器去写不同的 CSS,让它能够同时兼容不同的<br>浏览器,能在不同的浏览器中也能得到我们想要的页面效果.<br>简单的说,CSS hack 为了使 CSS 代码兼容不同的浏览器.当然,我们也可以反过来利用 CSS hack 为不同版本的浏览器定制编写<br>不同的 CSS 效果.<br>书写顺序,一般是将识别能力强的浏览器的 CSS 写在后面.<br>/<em>firefox</em>/ - /<em>all ie</em>/ - /<em>ie8</em>/ - /<em>ie7</em>/ - /<em>ie6</em>/ - /<em>ie9</em>/ - /<em>opera</em>/ - /<em>chrome and safari</em>/<br>技巧:渐进识别的方式,从总体中逐渐排除局部.<br>首先,巧妙的使用”\9”这一标记,将 IE 游览器从所有情况中分离出来.<br>接着,再次使用”+”将 IE8 和 IE7、IE6 分离开来,这样 IE8 已经独立识别.</p>
+<p>30、Sass、LESS 是什么?大家为什么要使用他们?<br>CSS 预处理器是一种语言用来为 CSS 增加一些编程的的特性,无需考虑浏览器的兼容性问题,例如你可以在 CSS 中使用变量、<br>简单的程序逻辑、函数等等在编程语言中的一些基本技巧,可以让你的 CSS 更见简洁,适应性更强,代码更直观等诸多好处.SASS、<br>LESS 是最常见的 CSS 预处理器框架.<br>Less 是一种动态样式语言.将 CSS 赋予了动态语言的特性,如变量,继承,运算, 函数. LESS 既可以在客户端上运行 (支持 IE 6+,<br>Webkit, Firefox),也可一在服务端运行(借助 Node.js).<br>优点:<br>结构清晰,便于扩展.<br>可以方便地屏蔽浏览器私有语法差异.这个不用多说,封装对浏览器语法差异的重复处理,<br>减少无意义的机械劳动.<br>可以轻松实现多重继承.<br>完全兼容 CSS 代码,可以方便地应用到老项目中.LESS 只是在 CSS 语法上做了扩展,所以老的 CSS 代码也可以与<br>LESS 代码一同编译.</p>
+<p>31、html 常见兼容性问题?<br>1.IE 的双边距 BUG<br>问题:块级元素 float 后设置横向 margin,ie6 显示的 margin 比设置的较大.<br>解决:给块级元素设置<em>display:inline;(</em> 只有 ie6 能识别)<br>2.超链接访问过后 hover 样式就不出现的问题是什么?如何解决?<br>问题:被点击访问过的超链接样式不在具有 hover 和 active 了<br>解决:改变 CSS 属性的排列顺序: L-V-H-A(link,visited,hover,active)<br>3.3 个像素问题<br>问题:在IE7中两个div是紧挨着的,但是在IE6中会出现两个div之间出现3px左右的间隙,这就是传说中的”IE 3px bug”.<br>解决:这是由于使用 float 引起的使用 dislpay:inline -3px 可以解决.<br>4.IE z-index 问题<br>问题:父元素有定位,子元素即便设置 z-index 为多少,都会显示在最上面.<br>解决:那是因为 z-index 是有继承的.父元素有定位,默认 z-index 为 1.那么子元素也就 z-index 为 1. 要想改变,就得给父<br>元素设置 position:relative,后再设置 z-index.<br>5.IE5-8 不支持 opacity<br>解决: 使用滤镜 filter<br>filter: alpha(opacity=60); /<em> for IE5-7 </em>/<br>-ms-filter: “progid:DXImageTransform.Microsoft.Alpha(Opacity=60)”; /<em> for IE 8</em>/<br>6.IE6 不支持 PNG 透明背景<br>解决: IE6 下使用 gif 图片<br>7.Png 透明<br>问题:用透明 PNG 图片作为链接的背景,图像的透明部分变得不能点击.<br>解决:在兼容 ie 的代码中,给 a 标签设置背景,而 background 的 url()设置为当前页面上.<br>8.Min-height 最小高度<br>问题:没办法设置最小高度<br>解决:用!Important 解决.代码: height:auto !important ; height:最小 px;<br>9.select 在 ie6 下遮盖 使用 iframe 嵌套<br>解决:用 iframe 当做 div 的底. div 可以遮盖 iframe,iframe 可以遮盖 select.<br>10.没法定义 1px 左右的宽度容器<br>问题:IE6 默认的行高造成的<br>解决:使用 over:hidden,zoom:0.08, line-height:1px 可以解决.<br>11.浏览器默认的 margin 和 padding 不同.<br>解决: 加一个全局的 *{ margin:0; padding:0;} 或者 css 初始化<br>12.a(有 href 属性)标签嵌套下的 img 标签,在 IE 下会有边框.<br>解决: a img{border:none;}</p>
+<ol>
+<li>input 中 button 会有默认的边框,阴影<br>解决:用 border:none; 解决.在 IE6 以下,还需要加上 border-color:transparet;<br>32、请用 Css 写一个简单的幻灯片效果页(c3 的 animation 动画)</li>
+</ol>
+<style>
+.ani{
+width:100px;
+height:100px;
+overflow: hidden;
+box-shadow:0 0 5px rgba(0,0,0,1);
+background-position: center;
+-webkit-animation: loops 10s infinite;
+}
+
+@-webkit-keyframes loops {
+0% { background:url(images/1.jpg) no-repeat; }
+33% { background:url(images/2.jpg) no-repeat; }
+66% { background:url(images/3.jpg) no-repeat; }
+/*说明:这里最后一帧如果和最初一帧不同,会出现跳跃*/
+100% { background:url(images/1.jpg) no-repeat; }
+}
+</style>
+
+<p>33、书写代码,实现 table 表格的隔行变色<br>方案 1:js 里的隔行变色,js 代码核心为 i%2 时的取值,进行操作 style<br>方案 2:使用 c3 选择器 E:nth-of-type(2n)、E:nth-of-type(2n+1)</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/10/hell命令的使用/" rel="next" title="hell命令的使用">
+                <i class="fa fa-chevron-left"></i> hell命令的使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微薄</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="xiaoyibaobao" />
+          <p class="site-author-name" itemprop="name">xiaoyibaobao</p>
+           
+              <p class="site-description motion-element" itemprop="description">前端学习</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiaoyibaobao</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/benkui.js"></script>
+
