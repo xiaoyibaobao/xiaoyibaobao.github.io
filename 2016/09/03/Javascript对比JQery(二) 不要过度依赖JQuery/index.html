@@ -96,17 +96,17 @@
 
 
 
-<meta name="description" content="闭包，是 Javascript 比较重要的一个概念，对于初学者来讲，闭包是一个特别抽象的概念，特别是ECMAScript 规范给的定义，如果没有实战经验，很难从定义去理解它。因此，本文不会对闭包的概念进行大篇幅描述，直接上干货，让你分分钟理解闭包！ 1 闭包，一睹为快 在接触一个新技术的时候，我首先会做的一件事就是找它的 demo。对于我们来说，看代码比自然语言更能理解一个事物的本质。其实，闭包无">
+<meta name="description" content="1、位置 获取相对于文档位置 $(&amp;apos;#test&amp;apos;).offset()  function offset(elem){     var rect = elem.getBoundindClientReact();     return {         top: rect.top + document.body.scrollTop,         left: rect.left">
 <meta property="og:type" content="article">
-<meta property="og:title" content="让你分分钟理解 JavaScript 闭包">
-<meta property="og:url" content="http://yoursite.com/2016/09/03/让你分分钟理解 JavaScript 闭包/index.html">
+<meta property="og:title" content="Javascript对比JQery(二) 不要过度依赖JQuery">
+<meta property="og:url" content="http://yoursite.com/2016/09/03/Javascript对比JQery(二) 不要过度依赖JQuery/index.html">
 <meta property="og:site_name" content="Deng HuaJin">
-<meta property="og:description" content="闭包，是 Javascript 比较重要的一个概念，对于初学者来讲，闭包是一个特别抽象的概念，特别是ECMAScript 规范给的定义，如果没有实战经验，很难从定义去理解它。因此，本文不会对闭包的概念进行大篇幅描述，直接上干货，让你分分钟理解闭包！ 1 闭包，一睹为快 在接触一个新技术的时候，我首先会做的一件事就是找它的 demo。对于我们来说，看代码比自然语言更能理解一个事物的本质。其实，闭包无">
+<meta property="og:description" content="1、位置 获取相对于文档位置 $(&amp;apos;#test&amp;apos;).offset()  function offset(elem){     var rect = elem.getBoundindClientReact();     return {         top: rect.top + document.body.scrollTop,         left: rect.left">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-03T09:48:44.130Z">
+<meta property="og:updated_time" content="2017-09-03T09:48:15.359Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="让你分分钟理解 JavaScript 闭包">
-<meta name="twitter:description" content="闭包，是 Javascript 比较重要的一个概念，对于初学者来讲，闭包是一个特别抽象的概念，特别是ECMAScript 规范给的定义，如果没有实战经验，很难从定义去理解它。因此，本文不会对闭包的概念进行大篇幅描述，直接上干货，让你分分钟理解闭包！ 1 闭包，一睹为快 在接触一个新技术的时候，我首先会做的一件事就是找它的 demo。对于我们来说，看代码比自然语言更能理解一个事物的本质。其实，闭包无">
+<meta name="twitter:title" content="Javascript对比JQery(二) 不要过度依赖JQuery">
+<meta name="twitter:description" content="1、位置 获取相对于文档位置 $(&amp;apos;#test&amp;apos;).offset()  function offset(elem){     var rect = elem.getBoundindClientReact();     return {         top: rect.top + document.body.scrollTop,         left: rect.left">
 
 
 
@@ -135,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/09/03/让你分分钟理解 JavaScript 闭包/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/09/03/Javascript对比JQery(二) 不要过度依赖JQuery/"/>
 
 
 
 
 
-  <title>让你分分钟理解 JavaScript 闭包 | Deng HuaJin</title>
+  <title>Javascript对比JQery(二) 不要过度依赖JQuery | Deng HuaJin</title>
   
 
 
@@ -274,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/03/让你分分钟理解 JavaScript 闭包/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/03/Javascript对比JQery(二) 不要过度依赖JQuery/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiaoyibaobao">
@@ -291,7 +291,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">让你分分钟理解 JavaScript 闭包</h1>
+          <h1 class="post-title" itemprop="name headline">Javascript对比JQery(二) 不要过度依赖JQuery</h1>
         
 
         <div class="post-meta">
@@ -303,7 +303,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-03T17:10:40+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-03T17:45:13+08:00">
                 2016-09-03
               </time>
             
@@ -363,97 +363,313 @@
       
 
       
-        <p>闭包，是 Javascript 比较重要的一个概念，对于初学者来讲，闭包是一个特别抽象的概念，特别是ECMAScript 规范给的定义，如果没有实战经验，很难从定义去理解它。因此，本文不会对闭包的概念进行大篇幅描述，直接上干货，让你分分钟理解闭包！</p>
-<p>1</p>
-<p>闭包，一睹为快</p>
-<p>在接触一个新技术的时候，我首先会做的一件事就是找它的 demo。对于我们来说，看代码比自然语言更能理解一个事物的本质。其实，闭包无处不在，比如：jQuery、zepto的核心代码都包含在一个大的闭包中，所以下面我先写一个最简单最原始的闭包，以便让你在大脑里产生闭包的画面：</p>
-<a id="more"></a>
-<pre><code>function A(){
-    function B(){
-       console.log(&quot;Hello Closure!&quot;);
-    }
-    return B;
-}
-var C = A();
-C();//Hello Closure!
-</code></pre><p>这是最简单的闭包。</p>
-<p>有了初步认识后，我们简单分析一下它和普通函数有什么不同，上面代码翻译成自然语言如下：</p>
-<p>（1）定义普通函数 A</p>
-<p>（2）在 A 中定义普通函数 B</p>
-<p>（3）在 A 中返回 B</p>
-<p>（4）执行 A, 并把 A 的返回结果赋值给变量 C</p>
-<p>（5）执行 C</p>
-<p>把这5步操作总结成一句话就是：</p>
-<p>函数A的内部函数B被函数A外的一个变量 c 引用。</p>
-<p>把这句话再加工一下就变成了闭包的定义：</p>
-<p>当一个内部函数被其外部函数之外的变量引用时，就形成了一个闭包。</p>
-<p>因此，当你执行上述5步操作时，就已经定义了一个闭包！</p>
-<p>这就是闭包。</p>
-<p>2</p>
-<p>闭包的用途</p>
-<p>在了解闭包的作用之前，我们先了解一下 Javascript 中的GC机制:</p>
-<p>在 Javascript 中，如果一个对象不再被引用，那么这个对象就会被 GC 回收，否则这个对象一直会保存在内存中。</p>
-<p>在上述例子中，B 定义在 A 中，因此 B 依赖于 A ,而外部变量 C 又引用了 B , 所以A间接的被 C 引用。</p>
-<p>也就是说，A 不会被 GC 回收，会一直保存在内存中。为了证明我们的推理，上面的例子稍作改进：</p>
-<pre><code>function A(){
-    var count = 0;
-    function B(){
-       count ++;
-       console.log(count);
-    }
-    return B;
-}
-var C = A();
-C();// 1
-C();// 2
-C();// 3
-</code></pre><p>count 是函数A 中的一个变量，它的值在函数B 中被改变，函数B 每执行一次，count 的值就在原来的基础上累加 1 。因此，函数A中的 count 变量会一直保存在内存中。</p>
-<p>当我们需要在模块中定义一些变量，并希望这些变量一直保存在内存中但又不会“污染”全局的变量时，就可以用闭包来定义这个模块。</p>
-<p>3</p>
-<p>闭包的高级写法</p>
-<p>上面的写法其实是最原始的写法，而在实际应用中，会将闭包和匿名函数联系在一起使用。下面就是一个闭包常用的写法：</p>
-<pre><code>(function(document){
-    var viewport;
-    var obj = {
-        init:function(id){
-           viewport = document.querySelector(&quot;#&quot;+id);
-        },
-        addChild:function(child){
-            viewport.appendChild(child);
-        },
-        removeChild:function(child){
-            viewport.removeChild(child);
-        }
-    }
-    window.jView = obj;
-})(document);
-</code></pre><p>这个组件的作用是：初始化一个容器，然后可以给这个容器添加子容器，也可以移除一个容器。</p>
-<p>功能很简单，但这里涉及到了另外一个概念：立即执行函数。 简单了解一下就行，需要重点理解的是这种写法是如何实现闭包功能的。</p>
-<p>可以将上面的代码拆分成两部分：(function(){}) 和 () , 第1个() 是一个表达式，而这个表达式本身是一个匿名函数，所以在这个表达式后面加 () 就表示执行这个匿名函数。</p>
-<p>因此这段代码执行执行过程可以分解如下：</p>
-<pre><code>var f = function(document){
-    var viewport;
-    var obj = {
-        init:function(id){
-            viewport = document.querySelector(&quot;#&quot;+id);
-        },
-        addChild:function(child){
-            viewport.appendChild(child);
-        },
-        removeChild:function(child){
-            viewport.removeChild(child);
-        }
-    }
-    window.jView = obj;
-};
-f(document);
-</code></pre><p>在这段代码中似乎看到了闭包的影子，但 f 中没有任何返回值，似乎不具备闭包的条件，注意这句代码：</p>
-<pre><code>window.jView = obj;;
-</code></pre><p>obj 是在函数 f 中定义的一个对象，这个对象中定义了一系列方法， 执行window.jView = obj 就是在 window 全局对象定义了一个变量 jView，并将这个变量指向 obj 对象，即全局变量 jView 引用了 obj . 而 obj 对象中的函数又引用了函数 f 中的变量 viewport ,因此函数 f 中的 viewport 不会被 GC 回收，viewport 会一直保存到内存中，所以这种写法满足了闭包的条件。</p>
-<p>4</p>
-<p>总结</p>
-<p>这是对闭包最简单的理解，当然闭包还有其更深层次的理解，这个就涉及的多了，你需要了解JS的执行环境(execution context)、活动对象(activation object)以及作用域(scope)和作用域链(scope chain)的运行机制。但作为初学者，暂时不必了解这些，有了简单的理解之后，一定要在实际项目中用起来，等你用的多了，对于闭包，你自然会有更深层次的理解！</p>
+        <p>1、位置</p>
+<p>获取相对于文档位置</p>
+<pre><code>$(&apos;#test&apos;).offset()
 
+function offset(elem){
+    var rect = elem.getBoundindClientReact();
+    return {
+        top: rect.top + document.body.scrollTop,
+        left: rect.left + document.body.scrollLeft
+    }
+}
+</code></pre><a id="more"></a>
+<p>获取相对于具有定位（非static）的父元素（祖先元素）的位置：著作权归作者所有。</p>
+<pre><code>$(&apos;#test&apos;).position();
+var t = document.getElementById(&apos;test&apos;);
+var position = { top:t.offsetTop,left:t.offsetLeft }
+</code></pre><p>获取相对于可视区左上角的位置</p>
+<pre><code>var offset = $(&apos;#test&apos;).offset();
+var position = {
+    top:offset.top - document.body.scrollTop,
+    left:offset.left - document.body.scrollLeft
+}
+</code></pre><p>尺寸</p>
+<p>获取包含内边距（padding）和边框（border）的元素高宽著作权归作者所有。</p>
+<pre><code>var width = $(&apos;#test&apos;).outerWidth();
+var height = $(&apos;#test&apos;).outerHeight();
+
+var t = doucment.getElementById(&apos;test&apos;);
+var width = t.offsetWidth;
+var height = t.offsetHeight;
+</code></pre><p>获取元素内容的总高度</p>
+<pre><code>var t = document.getElementById(&apos;test&apos;);
+//在没有滚动条的情况下，元素内容的总高度
+t.scrollHeight;
+t.scrollWidth
+</code></pre><p>视口大小</p>
+<pre><code>var pageWidth = window.innerWidth || document.documentElement.clientWidth;
+var pageHieght = window.innerHeight || document.documentElement.clientHeight;
+</code></pre><p>绑定自定义数据</p>
+<pre><code>//绑定
+$(&apos;#test&apos;).data(&apos;name&apos;,&apos;TG&apos;);
+//读取
+$(&apos;#test&apos;).data(&apos;name&apos;);
+//移除
+$(&apos;#test&apos;)。removeDate(&apos;name&apos;);
+
+var t = document.getElementById(&apos;test&apos;);
+//绑定
+t.dataset.name = &apos;TG&apos;
+//读取
+t.dataset.name
+//移除
+delete t.dataset.name
+</code></pre><p>事件</p>
+<p>绑定事件</p>
+<pre><code>$(&apos;#test&apos;).on(&apos;click&apos;,function(){})
+
+var addEvent = function( dom,type,handle,capture ){
+    if(dom.addEventListener){
+        dom.addEventListener(type,handle,capture)
+    }else if(dom.attachEvent){
+        dom.attachEvent(&apos;on&apos;type,handle)
+    }
+}
+var t = document.getElementById(&apos;test&apos;);
+
+addEvent(t, &apos;click&apos;, function(){});
+</code></pre><p>移除事件</p>
+<pre><code>$(&apos;#test&apos;).off(&apos;click&apos;, fn);
+
+
+
+var deleteEvent = function(dom, type, handle) {
+
+  if(dom.removeEventListener) {
+
+    dom.removeEventListener(type, handle);
+
+  } else if(dom.detachEvent) {
+
+    dom.detachEvent(&apos;on&apos; + type, handle);
+
+  } };
+
+var t = document.getElementById(&apos;test&apos;);
+
+deleteEvent(t, &apos;click&apos;, fn);
+</code></pre><p>事件代理</p>
+<pre><code>$(document).on(&apos;click&apos;,&apos;test&apos;,fn)
+
+function eventBorder(e,className,fn){
+    var target = e.target;
+    while(target){
+        if( target &amp;&amp; target.nodeName == &apos;#doucment&apos; ){
+            break;
+        }else if(target.classList.contains(className)){
+            fn();
+            breadk;
+        };
+        target = target.parentNode;
+    }
+}
+addEvent(document,&apos;click&apos;,function(e){
+    eventBroker(e,&apos;test&apos;,function(){})
+})
+</code></pre><p>获取Event对象</p>
+<pre><code>$(&apos;#test&apos;, &apos;click&apos;, function(event){
+
+  event = event.originalEvent;
+
+});
+
+
+
+var t = document.getElementById(&apos;test&apos;);
+
+addEvent(t, &apos;click&apos;, function(event){
+
+  event = event || window.event;
+
+});
+</code></pre><p>DOM加载完毕</p>
+<pre><code>$(doucment).ready(function(){})
+
+functon ready(fn){
+    if( doucment.readyState != &apos;loading&apos; ){
+        // ie9+
+
+    document.addEventListener(&apos;DOMContentLoaded&apos;, fn);
+
+  } else {
+
+    // ie8
+
+    document.attachEvent(&apos;onreadystatechange&apos;, function() {
+
+      if (document.readyState != &apos;loading&apos;){
+
+        fn();
+
+      }
+
+    });
+
+  }
+}
+</code></pre><p>指定事件触发</p>
+<pre><code>$(&apos;#test&apos;).trigger(&apos;click&apos;);
+
+
+
+function trigger(elem, type) {
+
+  if (document.createEvent) {
+
+    var event = document.createEvent(&apos;HTMLEvents&apos;);
+
+    event.initEvent(type, true, false);
+
+    elem.dispatchEvent(event);
+
+  } else {
+
+    elem.fireEvent(&apos;on&apos; + type);
+
+  }
+
+}
+
+
+
+
+var t = document.getElementById(&apos;test&apos;);
+
+trigger(t, &apos;click&apos;);
+</code></pre><p>5.AJAX</p>
+<p>GET</p>
+<pre><code>$.get(&quot;test.php&quot;, { name: &quot;TG&quot;},
+
+  function(data){
+
+    console.log(data);
+
+});
+
+
+
+var xhr= new XMLHttpRequest();
+
+xhr.open(&apos;GET&apos;, &apos;test.php?name=TG&apos;, true); // false（同步）
+
+xhr.onreadystatechange = function() {
+
+  if (xhr.readyState === 4) {
+
+    if (xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 400) {
+
+      // 成功
+
+      var data = JSON.parse(xhr.responseText);
+
+    } else {
+
+     // 错误
+
+    }
+
+  }
+
+};
+
+xhr.send(null);
+</code></pre><p>POST</p>
+<pre><code>$.post(&quot;test.php&quot;, { name: &quot;TG&quot;},
+
+  function(data){
+
+    console.log(data);
+
+});
+
+
+
+var xhr= new XMLHttpRequest();
+
+xhr.open(&apos;POST&apos;, &apos;test.php&apos;, true); // false（同步）
+
+xhr.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);  // 必需
+
+xhr.onreadystatechange = function() {
+
+  if (xhr.readyState === 4) {
+
+    if (xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 400) {
+
+      // 成功
+
+      var data = JSON.parse(xhr.responseText);
+
+    } else {
+
+      // 错误
+
+    }
+
+  }
+
+};
+
+var data = {name: &quot;t&quot;};
+
+xhr.send(data);
+</code></pre><p>Fetch请求</p>
+<pre><code>fetch(url).then(function (response) {
+
+  return response.json();
+
+}).then(function (jsonData) {
+
+  console.log(jsonData);
+
+}).catch(function () {
+
+  console.log(&apos;出错了&apos;);
+
+});
+</code></pre><p>POST</p>
+<pre><code>fetch(url,{
+
+  method: &apos;POST&apos;,
+
+  headers: {
+
+    &apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos;
+
+  },
+
+  body: &apos;name=TG&amp;love=1&apos;
+
+}).then(function(response){})
+</code></pre><p>6.数组</p>
+<p>判断元素是否在数组内</p>
+<pre><code>$.inArray(item,array)
+
+array.indexOf(item)
+</code></pre><p>判断是否在数组</p>
+<pre><code>$.isArray(arr)
+
+Array.isArray(arr)
+</code></pre><p>7、特效</p>
+<p>隐藏显示</p>
+<pre><code>$(&apos;#test&apos;).hide();
+
+
+
+var t = document.getElementById(&apos;test&apos;);
+
+t.style.display = &apos;none&apos;;
+
+
+
+$(&apos;#test&apos;).show();
+
+
+
+t.style.display = &apos;block&apos;;
+</code></pre>
       
     </div>
     
@@ -477,8 +693,8 @@ f(document);
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/15/URL请求加载过程/" rel="next" title="URL请求加载过程">
-                <i class="fa fa-chevron-left"></i> URL请求加载过程
+              <a href="/2016/09/03/让你分分钟理解 JavaScript 闭包/" rel="next" title="让你分分钟理解 JavaScript 闭包">
+                <i class="fa fa-chevron-left"></i> 让你分分钟理解 JavaScript 闭包
               </a>
             
           </div>
@@ -486,10 +702,6 @@ f(document);
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/09/03/Javascript对比JQery(二) 不要过度依赖JQuery/" rel="prev" title="Javascript对比JQery(二) 不要过度依赖JQuery">
-                Javascript对比JQery(二) 不要过度依赖JQuery <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
